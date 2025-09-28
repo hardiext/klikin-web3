@@ -51,72 +51,62 @@ const OnBoardingBenefit = () => {
   };
 
   return (
-    <div className="w-full min-h-[95vh] max-w-3xl relative overflow-hidden rounded-4xl box-border">
-  
+    <div className="w-full max-w-3xl relative overflow-hidden lg:rounded-4xl box-border h-[28vh] md:h-[95vh]">
       <Image
         src={image}
         alt={title}
         fill
-        className="object-cover brightness-80"
+        className="object-cover brightness-70"
       />
 
-  
-      <div className="absolute top-10 px-6">
+      {/* Logo */}
+      <div className="absolute top-4 px-4 lg:block hidden">
         <Image src={images.logoWhite} alt="Logo" width={80} height={80} />
       </div>
 
-      <div className="absolute bottom-8 right-4 flex items-center space-x-4 z-40">
-        <div className="relative rounded-full">
-          <button
-            onClick={handleBack}
-            className="bg-transparent bg-opacity-70 rounded-full p-3 hover:bg-opacity-90 relative z-10 hover:bg-white cursor-pointer group"
-          >
-            <ArrowLeft className="text-white group-hover:text-neutral-800 transition-colors ease-in-out duration-500" />
-          </button>
-          <BorderBeam
-            reverse
-            duration={2}
-            borderWidth={2}
-            colorTo="white"
-            colorFrom="white"
-            className="absolute rounded-full inset-0 pointer-events-none"
-          />
-        </div>
-        <div className="relative rounded-full">
-          <button
-            onClick={handleNext}
-            className="bg-transparent hover:bg-white cursor-pointer bg-opacity-70 rounded-full p-3 hover:bg-opacity-90 relative z-10 group"
-          >
-            <ArrowRight className="text-white group-hover:text-neutral-800 transition-colors ease-in-out duration-500" />
-          </button>
-          <BorderBeam
-            borderWidth={2}
-            duration={2}
-            colorTo="white"
-            colorFrom="white"
-            className="absolute inset-0 pointer-events-none text-white"
-          />
-        </div>
-      </div>
-
-    
-      <div className="absolute bottom-8 left-6 flex flex-col z-30">
+      <div className="absolute flex lg:flex-row flex-col bottom-0  justify-between items-end  p-4 md:p-6 w-full">
         <AnimatePresence mode="wait">
           <motion.div
             key={currentIndex}
-            variants={contentVariants}
+            variants={{
+              initial: { opacity: 0, y: 20 },
+              animate: { opacity: 1, y: 0, transition: { duration: 0.6 } },
+              exit: { opacity: 0, y: -20, transition: { duration: 0.6 } },
+            }}
             initial="initial"
             animate="animate"
             exit="exit"
+            className=" bg-transparent bg-opacity-40 lg:rounded-xl  max-h-max"
           >
-            <h1 className="text-white font-semibold text-xl md:text-2xl max-w-lg mb-4 leading-tight">
+            <h1 className="text-white font-semibold text-xl md:text-2xl max-w-full md:max-w-lg mb-2 md:mb-4 leading-tight">
               {title}
             </h1>
-            <p className="text-white font-medium text-md md:max-w-md">
+            <p className="text-white text-md md:text-md md:max-w-md">
               {benefit}
             </p>
           </motion.div>
         </AnimatePresence>
+
+        <div className="flex justify-end space-x-4 mt-4">
+          <div className="relative rounded-full max-h-max">
+            <button
+              onClick={handleBack}
+              className="bg-trasnparent bg-opacity-20 hover:bg-opacity-40 text-white rounded-full p-2 md:p-3 hover:bg-white hover:text-black transition-all ease-in-out duration-300 cursor-pointer group"
+            >
+              <ArrowLeft />
+            </button>
+            <BorderBeam borderWidth={2} colorFrom="white" colorTo="white"/>
+          </div>
+          <div className="relative rounded-full max-h-max">
+          <button
+            onClick={handleNext}
+            className="bg-trasnparent bg-opacity-20 hover:bg-opacity-40 text-white rounded-full p-2 md:p-3 hover:bg-white hover:text-black transition-all ease-in-out duration-300 cursor-pointer group"
+          >
+            <ArrowRight />
+          </button>
+            <BorderBeam borderWidth={2} colorFrom="white" colorTo="white"/>
+            </div>
+        </div>
       </div>
     </div>
   );

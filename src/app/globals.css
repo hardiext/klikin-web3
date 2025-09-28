@@ -158,6 +158,22 @@
     --sidebar-ring: oklch(0.439 0 0);
   }
 }
+/* Override Chrome autofill */
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  -webkit-box-shadow: 0 0 0px 1000px transparent inset !important; /* background tetap transparan */
+  -webkit-text-fill-color: currentColor !important; /* warna teks tetap */
+  caret-color: currentColor;
+}
+
+/* Untuk Firefox */
+input:-moz-autofill {
+  box-shadow: 0 0 0px 1000px transparent inset !important;
+  -moz-text-fill-color: currentColor !important;
+}
+
 
 @layer base {
   * {
