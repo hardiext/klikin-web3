@@ -10,7 +10,6 @@ import { Input } from "@/components/ui/input";
 import { images } from "@/data/image";
 import { image } from "motion/react-client";
 import Image from "next/image";
-
 const LoginForm = () => {
   return (
     <div className="w-full lg:px-8 lg:py-6 p-0  ">

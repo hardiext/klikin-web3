@@ -5,6 +5,7 @@ import logoWhite from "@/assets/Logo-white.svg";
 import logoDark from "@/assets/Logo-dark.svg";
 import googleLogo from "@/assets/gogole-logo.png"
 import facebookLogo from "@/assets/Facebook_logo.svg"
+import discover1 from "@/assets/discover1.jpeg"
 export const images = {
   shopingGroup,
   unboxing,
@@ -12,5 +13,6 @@ export const images = {
   logoWhite,
   logoDark,
   googleLogo,
-  facebookLogo
+  facebookLogo,
+  discover1
 };
