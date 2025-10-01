@@ -2,7 +2,7 @@
 
 ![Next.js](https://img.shields.io/badge/-Next.js-blue?logo=nextjs&logoColor=white) ![React](https://img.shields.io/badge/-React-blue?logo=react&logoColor=white) ![TypeScript](https://img.shields.io/badge/-TypeScript-blue?logo=typescript&logoColor=white)
 
-## 📝 Descriptions
+## 📝 Description
 
 Klikin Web3 is a cutting-edge web application built with Next.js, React, and TypeScript, designed to provide a seamless and intuitive gateway to the world of Web3. This platform empowers users to explore and interact with decentralized technologies through a user-friendly interface, abstracting away the complexities often associated with blockchain and cryptocurrency. With a focus on accessibility and performance, Klikin Web3 leverages the power of modern web development practices to deliver a robust and engaging experience.
 
